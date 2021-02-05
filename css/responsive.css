@@ -1,0 +1,378 @@
+@media(min-width:1200px) {}
+
+/*===============(min-width:992px) and (max-width:1199px)=================*/
+@media(min-width:992px) and (max-width:1199px) {}
+
+/*================(min-width:768px) and (max-width:991px)==================*/
+@media(min-width:768px) and (max-width:991px) {
+
+    /*****navbar section start*****/
+    .header {
+        position: relative;
+        background: #212A49;
+        padding: 25px 0px 25px 0px;
+    }
+
+    .bg {
+        position: fixed;
+    }
+
+    .navbar .navbar_hidden_img {
+        padding-left: 20px;
+        display: block;
+
+    }
+
+    .navbar-light .navbar-toggler {
+        padding-right: 20px;
+        border: none;
+
+    }
+    .header-container {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .header_logo {
+        display: none;
+    }
+    .submenu_padding {
+        padding: 0px;
+    }
+
+    .navbar-nav .nav-item {
+        display: table;
+        margin-top: 10px;
+    }
+
+    .sub_menu {
+        top: 53%;
+        z-index: 999;
+    }
+
+    .menu-item-has-children:hover .sub_menu {
+        top: 60%;
+    }
+
+    .sub_menu2 {
+        top: 65%;
+        z-index: 999;
+    }
+
+    .menu-item-has-children:hover .sub_menu2 {
+        top: 72%;
+    }
+
+    .zero {
+        padding: 15px 0
+    }
+
+    .zero span {
+        margin-left: 0px;
+    }
+
+
+
+    .navbar-collapse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 50px 36px 0;
+        background: #212A49;
+        z-index: -1;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    /*****navbar section end*****/
+    /*****discover section start*****/
+    .discover_left {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .discover_right_img {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /*****discover section end*****/
+    /*****discover section end*****/
+    .menu_img {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .discover_left {
+        padding: 70px 0;
+    }
+
+    /*****discover section end*****/
+}
+
+/*================(min-width:576px) and (max-width:767px)==================*/
+@media(min-width:576px) and (max-width:767px) {
+
+    /*****navbar section start*****/
+    .header {
+        position: relative;
+        background: #212A49;
+        padding: 25px 0px 25px 0px;
+    }
+
+    .bg {
+        position: fixed;
+    }
+
+    .navbar .navbar_hidden_img {
+        padding-left: 20px;
+        display: block;
+
+    }
+
+    .navbar-light .navbar-toggler {
+        padding-right: 20px;
+        border: none;
+
+    }
+    .header-container {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .header_logo {
+        display: none;
+    }
+
+    .submenu_padding {
+        padding: 0px;
+    }
+
+    .navbar-nav .nav-item {
+        display: table;
+        margin-top: 10px;
+    }
+
+    .sub_menu {
+        top: 53%;
+        z-index: 999;
+    }
+
+    .menu-item-has-children:hover .sub_menu {
+        top: 60%;
+    }
+
+    .sub_menu2 {
+        top: 65%;
+        z-index: 999;
+    }
+
+    .menu-item-has-children:hover .sub_menu2 {
+        top: 72%;
+    }
+
+    .zero {
+        padding: 15px 0
+    }
+
+    .zero span {
+        margin-left: 0px;
+    }
+
+
+
+    .navbar-collapse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 50px 36px 0;
+        background: #212A49;
+        z-index: -1;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    /*****navbar section end*****/
+    /*****discover section end*****/
+    .discover_left {
+        padding: 70px 0;
+    }
+
+    /*****discover section end*****/
+    /*****contact section end*****/
+    .contact_left {
+        text-align: center;
+    }
+
+    .contact_right {
+        text-align: center;
+    }
+
+    /*****contact section end*****/
+}
+
+/*================(min-width:320px) and (max-width:575px)==================*/
+@media(min-width:320px) and (max-width:575px) {
+
+    /*****navbar section start*****/
+    .header {
+        position: relative;
+        background: #212A49;
+        padding: 25px 0px 25px 0px;
+    }
+
+    .bg {
+        position: fixed;
+    }
+
+    .navbar .navbar_hidden_img {
+        padding-left: 20px;
+        display: block;
+
+    }
+
+    .navbar-light .navbar-toggler {
+        padding-right: 20px;
+        border: none;
+
+    }
+
+    .header_logo {
+        display: none;
+    }
+
+    .submenu_padding {
+        padding: 0px;
+    }
+
+    .navbar-nav .nav-item {
+        display: table;
+        margin-top: 10px;
+    }
+
+    .sub_menu {
+        top: 53%;
+        z-index: 999;
+    }
+
+    .menu-item-has-children:hover .sub_menu {
+        top: 60%;
+    }
+
+    .sub_menu2 {
+        top: 65%;
+        z-index: 999;
+    }
+
+    .menu-item-has-children:hover .sub_menu2 {
+        top: 72%;
+    }
+
+    .zero {
+        padding: 15px 0
+    }
+
+    .zero span {
+        margin-left: 0px;
+    }
+
+    .header-container {
+        padding: 0;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 50px 36px 0;
+        background: #212A49;
+        z-index: -1;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+
+    /*****navbar section end*****/
+    /*****banner section start*****/
+    .banner {
+        padding: 100px 0px;
+    }
+
+    .main_heading h2 {
+        font-size: 26px;
+    }
+
+    .mini_heading h2 {
+        font-size: 55px;
+    }
+
+    .discover_left .discover_mini_heading h2 {
+        font-size: 60px;
+    }
+
+
+    /*****banner section end*****/
+    /*****discover section start*****/
+    .discover_left .discover_main_heading h2 {
+        font-size: 44px;
+    }
+
+    .discover_left {
+        padding: 50px 0 50px 0;
+    }
+
+    .discover_left .discover_btn a {
+        font-size: 16px;
+    }
+
+    .discover_right_img img {
+        height: 270px;
+    }
+
+    /*****discover section end*****/
+    /*****testful section end*****/
+    .tastful_item h2,
+    .blend_item h2 {
+        font-size: 50px;
+    }
+
+    .tastful,
+    .blend {
+        padding: 150px 0;
+    }
+
+    /*****testful section end*****/
+    /*****contact section end*****/
+    .contact_left {
+        text-align: center;
+    }
+
+    .contact_right {
+        text-align: center;
+    }
+
+    .contact_left h2 {
+        font-size: 28px;
+    }
+
+    .contact_right a {
+        font-size: 28px;
+    }
+
+    /*****contact section end*****/
+    /*****footer section start*****/
+    .footer {
+        padding: 15px 0;
+    }
+    /*****footer section end*****/
+
+}

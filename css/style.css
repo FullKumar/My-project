@@ -1,0 +1,1511 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+
+}
+
+:root {
+    --theme-transition-duration: .4s;
+    --theme-transition-easing: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --theme-transition: all var(--theme-transition-duration) var(--theme-transition-easing);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*****************
+common css end
+**************/
+.header {
+    position: fixed;
+    padding: 30px 0px 0px 0px;
+    width: 100%;
+    z-index: 999;
+}
+
+.bg {
+    padding-top: 30px 0px 0px 0px;
+    background: #212A49;
+    animation: menu 1s;
+
+}
+
+@keyframes menu {
+    from {
+        top: -100px;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+.navbar_hidden_img {
+    display: none;
+}
+
+.header_logo a img {
+    padding-bottom: 30px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 30px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    color: #ffffff;
+    padding: 0;
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+    color: #fff;
+}
+
+.navbar-nav .nav-item .nav-link:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 16%;
+    bottom: -6px;
+    background: #000;
+    transition: var(--theme-transition);
+    transition-property: transform;
+    transform: scale3d(0, 1, 1);
+    will-change: transform;
+    transform-origin: right;
+    background: #ffffff;
+}
+
+
+.navbar-nav .nav-item .nav-link:hover:before {
+    transform: scale3d(1, 1, 1);
+    transform-origin: left;
+}
+
+.navbar-nav .menu-item-has-children a:before {
+    width: calc(100% - 1em);
+    right: 1.25em;
+    left: 0em;
+}
+
+
+
+.navbar-nav .menu-item-has-children a:hover:before {
+    width: calc(100% - 1em);
+    right: 1.25em
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.navbar-nav .nav-item .nav-link i {
+    opacity: .5;
+}
+
+.navbar-nav .nav-item:hover i {
+    opacity: 1;
+}
+
+.submenu_padding {
+    padding: 15px 0px;
+}
+
+.sub_menu {
+    background: #ffffff;
+    width: 250px;
+    padding: 10px 0px;
+    border-radius: 2%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.navbar-nav .nav-item .sub_menu a {
+    display: block;
+    color: #212B49;
+    padding: 10px 10px;
+    transition: all .4s ease-in-out;
+}
+
+.navbar-nav .nav-item .sub_menu a:hover {
+    background: #f1f1f1;
+    letter-spacing: 1px;
+}
+
+.sub_menu a:before,
+.sub_menu a:after {
+    display: none;
+}
+
+.menu-item-has-children:hover .sub_menu {
+    opacity: 1;
+    visibility: visible;
+    /*    margin-top:10px;*/
+    top: 70%;
+}
+
+.zero span {
+    padding: 0px 6px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 35px;
+}
+
+/***********header section  end************/
+/***********banner section  start************/
+.banner {
+    position: relative;
+    padding: 155px 0px;
+    height: 100%;
+    background: url(../images/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.flower span {
+    color: #ffffff;
+    /*    animation*/
+    opacity: 0;
+    animation: fadeUp 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+.main_heading h2 {
+    color: #fff;
+    font-size: 70px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    /*    animation*/
+    opacity: 0;
+    animation: fadeUp 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+.mini_heading h2 {
+    color: #fff;
+    font-size: 100px;
+    font-family: 'Raleway', sans-serif;
+    /*    animation*/
+    opacity: 0;
+    animation: scale 0.5s forwards;
+}
+
+
+.banner_text p,
+.banner_text_year p {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    /*    animation*/
+    opacity: 0;
+    animation: fadeDown 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+.banner_text_year p {
+    font-weight: bold;
+}
+
+.banner_bottom {
+    position: absolute;
+    z-index: 1;
+    bottom: -2px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.banner_bottom path {
+    color: #fff;
+}
+
+.scrroll_icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #424242;
+}
+
+.scrroll_icon:hover {
+    color: #424242;
+}
+
+/***********banner section  end************/
+
+/***********discavor section start*********/
+.discover {
+    padding: 60px 0;
+}
+
+.discover_left .discover_main_heading h2 {
+    color: #daac57;
+    font-size: 70px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+
+.discover_left .discover_mini_heading h2 {
+    color: #393c4b;
+    font-size: 80px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 60px;
+
+}
+
+.discover_left {
+    padding: 50px 0;
+}
+
+.discover_left .flower span {
+    color: #9a9ca8;
+    line-height: 60px;
+}
+
+.discover_left .discover_text p {
+    padding: 0px 40px;
+    font-family: 'Open Sans', sans-serif;
+    color: #262626;
+}
+
+.discover_btn a {
+    color: #b28603;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+
+.discover_btn a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - .5em);
+    /*    width:100%;*/
+    height: .1em;
+    will-change: transform;
+    transform-origin: left;
+    background: currentColor;
+    transition: var(--theme-transition);
+    transition-property: transform;
+}
+
+.discover_btn a:hover:before {
+    transform: scale3d(0, 1, 1);
+    transform-origin: right;
+}
+
+.discover_btn i {
+    color: #b28603;
+    font-size: 12px;
+    opacity: 0;
+    transition: all linear 0.5s;
+}
+
+.discover_btn a:hover i {
+    opacity: 1;
+    padding-left: 10px;
+}
+
+.discover_right_img img {
+    height: 465px;
+}
+
+/***********discavor section end*********/
+/***********tastful/blend section start*********/
+.tastful,
+.blend {
+    padding: 200px 0;
+    background-image: url(../images/tasteful-recipes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.blend {
+    background-image: url(../images/perfect-blend.jpg);
+}
+
+.tastful_item h2,
+.blend_item h2 {
+    color: #daac57;
+    font-size: 70px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+
+.tastful_item h3,
+.blend_item h3 {
+    color: #ffffff;
+    font-size: 80px;
+    line-height: 60px;
+}
+
+/***********tastful/blend section end*********/
+/***********menu section start*********/
+.menu_img img {
+    margin-top: 30px;
+}
+
+/***********menu section end*********/
+
+/***********conact section start*********/
+.contact {
+    padding: 70px 0;
+    background: #131927;
+}
+
+.contact_left h2 {
+    color: #fff;
+    font-size: 34px;
+}
+
+.contact_right a {
+    font-size: 34px;
+    color: #ffffff;
+    text-decoration: underline;
+    transition: all linear 0.3s;
+}
+
+.contact_right a:hover {
+    text-decoration-color: #daac57;
+}
+
+.contact_info h2,
+.additional h2,
+.opening_hours h2,
+.follow_us h2 {
+    color: #ffffff;
+    font-size: 24px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.contact_info p,
+.opening_hours p {
+    color: #fff;
+    margin: 0;
+    line-height: 25px;
+    font-size: 18px;
+
+}
+
+.additional a,
+.follow_us a {
+    display: table;
+    color: #fff;
+    text-decoration: underline;
+    line-height: 25px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.additional a:hover,
+.follow_us a:hover {
+    text-decoration-color: #daac57;
+}
+
+/***********contact section end*********/
+/***********footer section start*********/
+.footer {
+    padding: 70px 0;
+    background: #212a49;
+}
+
+.footer_text h2,
+.footer_text h2 a {
+    font-size: 16px;
+    color: #ffffff;
+
+}
+
+.footer_text h2 a {
+    text-decoration: underline;
+    transition: all 0.3s ease;
+
+}
+
+.footer_text h2 a:hover {
+    text-decoration-color: #daac57;
+}
+
+/***********footer section end*********/
+
+
+
+/*animation start*/
+@keyframes fadeUp {
+    0% {
+        transform: translateY(4rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        transform: translateY(-4rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*animation end*/
+/**************************menu page css start**************************/
+
+.menubanner {
+    position: relative;
+    padding: 155px 0px;
+    background: url(../images/manubanner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.menubanner:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav .nav-item .nav-link-menu:before {
+    transform: scale3d(1, 1, 1);
+    transform-origin: left;
+}
+
+.navbar-nav .nav-item .nav-link-menu:hover:before {
+    transform: scale3d(0, 1, 1);
+    transform-origin: right;
+}
+
+.navbar-nav .nav-item .nav-link-newsblog:before {
+    width: calc(100% - 1em);
+    transform: scale3d(1, 1, 1);
+    transform-origin: left;
+}
+
+.navbar-nav .nav-item .nav-link-newsblog:hover:before {
+    transform: scale3d(0, 1, 1);
+    transform-origin: right;
+}
+
+.menubanner .main_heading h2 {
+    color: #e8be47;
+    font-size: 100px;
+    font-weight: 900;
+    position: relative;
+    z-index: 1;
+
+}
+
+.menubanner .mini_heading h2 {
+    font-weight: 900;
+    position: relative;
+    z-index: 1;
+}
+
+/*allmenu start*/
+.menu_heading {
+    padding: 20px 0;
+}
+
+.menu_heading p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menu_left_item h2 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.same_item_left {
+    margin: 20px 0px;
+}
+
+.same_item_left p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #585858;
+}
+
+.all_item {
+    display: flex;
+}
+
+.all_item .menu_name {
+    width: 100%;
+}
+
+.all_item .menu_name h2 {
+    position: relative;
+    font-size: 24px;
+}
+
+.all_item .dot {
+    width: 100%;
+    height: 2px;
+    border-bottom: .2em dotted;
+    margin-top: 20px;
+}
+
+/*
+.all_item .menu_name h2:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: .2em dotted;
+    border-width: .15em;
+    bottom: 0.2em;
+    left: 103%;
+}
+*/
+
+.all_item .old_price h2 {
+    font-size: 18px;
+    text-decoration: line-through;
+    opacity: .6;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.all_item .new_price h2 {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/*font-family: 'Open Sans', sans-serif;*/
+/*font-family: 'Raleway', sans-serif;*/
+
+/*allmenu end*/
+.blend_menu {
+    position: relative;
+    padding: 200px 0px;
+    background: url(../images/rosa-placeholder-10.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.blend_menu:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.blend_menu_item {
+    position: relative;
+    z-index: 1;
+}
+
+.blend_menu_item a {
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    display: inline-block;
+    margin-bottom: 14px;
+    z-index: 1;
+
+}
+
+.blend_menu_item a:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    transform: scale3d(0, 1, 1);
+    transform-origin: left;
+    transition: all .3s ease-in-out;
+    z-index: -1;
+}
+
+.blend_menu_item a:hover {
+    color: #393c4b;
+
+}
+
+.blend_menu_item a:hover:after {
+    transform: scale3d(1, 1, 1);
+    transform-origin: left;
+
+}
+
+.blend_menu_item h2 {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/**************************menu page css end**************************/
+/**************************reservation page css start**************************/
+
+.reservation_banner {
+    position: relative;
+    padding: 170px 0px;
+    background: url(../images/contact-food.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar-nav .nav-item .nav-link-reservation:before {
+    transform: scale3d(1, 1, 1);
+    transform-origin: left;
+}
+
+.navbar-nav .nav-item .nav-link-reservation:hover:before {
+    transform: scale3d(0, 1, 1);
+    transform-origin: right;
+}
+
+.reservation_banner .main_heading h2 {
+    color: #e8be47;
+    font-size: 100px;
+    font-weight: 900;
+    position: relative;
+    z-index: 1;
+
+}
+
+.reservation_banner .mini_heading h2 {
+    font-weight: 900;
+    position: relative;
+    z-index: 1;
+}
+
+.reservation_banner .banner_text p {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/*************banner section end******************/
+/*************join section start******************/
+.join {
+    padding: 80px 0 65px 0;
+}
+
+.join p {
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+
+}
+
+.join_left {
+    display: flex;
+}
+
+.join_left_txt1 {
+    padding: 20px 20px 0 0;
+}
+
+.join_left_txt1 h2 {
+    font-size: 26px;
+}
+
+.join_left_txt1 p {
+    font-size: 18px;
+}
+
+.join_left_txt1 p a {
+    font-size: 18px;
+    color: #212529;
+    text-decoration: underline;
+    transition: all linear 0.3s;
+}
+
+.join_left_txt1 p a:hover {
+    text-decoration-color: #daac57;
+}
+
+.join_left_txt2 {
+    padding: 20px 0 0 20px;
+
+}
+
+.join_left_txt2 h2 {
+    font-size: 26px;
+}
+
+.join_left_txt2 p {
+    font-size: 18px;
+}
+
+.join_left_txt2 p a {
+    font-size: 18px;
+    color: #212529;
+    text-decoration: underline;
+    transition: all linear 0.3s;
+}
+
+.join_left_txt2 p a:hover {
+    text-decoration-color: #daac57;
+}
+
+/*************join section end******************/
+/*************reservation_discover section start******************/
+.reservation_discover_left {
+    padding: 0;
+}
+
+/*************reservation_discover section end******************/
+/*************Champagne section end******************/
+.Champagne {
+    padding: 60px 0;
+}
+
+.Champagne_content {
+    padding: 70px 0;
+    background: #DDAB5D;
+}
+
+.Champagne_txt h2 {
+    color: #fff;
+}
+
+.Champagne_txt p {
+    color: #fff;
+}
+
+/*************Champagne section end******************/
+
+/*******************************reservation page end**************************/
+/*******************************newsblog page end**************************/
+/**********whats on section start********/
+.newsblog_header {
+    background: #212A49;
+}
+
+.whatson {
+    padding: 200px 0px 50px 0;
+    background: #e8e8e8;
+}
+
+.whatson_text h2 {
+    font-size: 60px;
+    font-family: 'Raleway', sans-serif;
+    opacity: 0;
+    animation: scale 0.5s forwards;
+    font-weight: 700;
+    color: #34394B;
+}
+
+.whatson_textNB h2 {
+    font-size: 100px;
+}
+
+.whatson_text .mini_menu ul li a,
+.newsblog_alltext .mini_menu ul li a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    padding: 0;
+    color: #000;
+    transition: all linear 0.3s;
+    text-decoration-color: #daac57;
+    position: relative;
+}
+
+.whatson_text .mini_menu ul li a:hover,
+.newsblog_alltext .mini_menu ul li a:hover {
+    text-decoration: underline;
+    text-decoration-color: #daac57;
+}
+
+.whatson_text .mini_menu ul li,
+.newsblog_alltext .mini_menu ul li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.whatson_text .mini_menu ul li a:after,
+.newsblog_alltext .mini_menu ul li a:after {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #34394B;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 110%;
+}
+
+.whatson_text .mini_menu ul li:last-child a:after,
+.newsblog_alltext .mini_menu ul li:last-child a:after {
+    display: none;
+}
+
+/***********whats on section end*********/
+/***********newsblog_alltext section start*********/
+.same_section {
+    background: #e8e8e8;
+    padding: 50px;
+}
+
+.same_content_left1 {
+    margin: 0 15px 15px 0;
+
+}
+
+.same_content_left2 {
+    margin: 0 15px 15px 0;
+
+}
+
+.same_content_right1 {
+    margin: 0 0 15px 15px;
+
+}
+
+.same_content_right2 {
+    margin: 0 0 15px 15px;
+
+}
+
+.same_content_left1 img {
+    height: 458px;
+
+}
+
+.same_content_right1 img {
+    height: 497px;
+}
+
+.same_content_left2 img {
+    height: 415px;
+}
+
+.same_content_right2 img {
+    height: 458px;
+}
+
+.newsblog_alltext {
+    background: #fff;
+    padding: 65px;
+
+}
+
+.newsblog_alltext h2 {
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    opacity: 0;
+    animation: scale 0.5s forwards;
+    font-weight: 700;
+    color: #34394B;
+    margin-top: 20px;
+}
+
+.newsblog_alltext .flower {
+    padding: 10px 0 15px 0;
+}
+
+.newsblog_alltext .flower span {
+    color: #adadad;
+}
+
+.newsblog_alltext p {
+    color: #34394B;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/***********newsblog_alltext section end*********/
+/*******************************newsblog page end**************************/
+/*******************************readmorepage page start**************************/
+.same_sectionReadMorePage {
+    padding: 100px 0 150px 0;
+    background: #eeeff2;
+}
+
+.same_sectionReadMorePage .newsblog_alltext {
+    background: #eeeff2;
+}
+
+.same_sectionReadMorePage .newsblog_alltext h2 {
+    font-size: 70px;
+}
+
+.readmore {
+    position: relative;
+    bottom: 170px;
+}
+
+.readmore p,
+.readmore ol li,
+.figure_section p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.readmoreText h2 {
+    color: #34394B;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.readmoreText ol {
+    margin-left: 15px;
+}
+
+.readmore ol li {
+    margin-bottom: 15px;
+}
+
+.readmoreText ol li strong {
+    color: #34394B;
+    font-family: 'Raleway', sans-serif;
+}
+
+.figure_text figure {
+    float: right;
+    width: 68%;
+    margin: 0;
+    margin-left: 35px;
+}
+
+.figure_text figure blockquote {
+    position: relative;
+}
+
+.figure_text figure blockquote:before {
+    position: absolute;
+    content: '';
+    width: 180px;
+    height: 3px;
+    background: #daac57;
+    left: 0;
+    top: -15px;
+}
+
+.figure_text figure blockquote p {
+    font-size: 30px;
+    font-weight: 700;
+    color: #34394B;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.figure_text figure blockquote cite {
+    font-size: 18px;
+    color: #34394B;
+    font-weight: 400;
+}
+
+.figure_section {
+    margin-top: -150px;
+}
+
+.articleBtn_left,
+.articleBtn_right {
+    margin: 50px 0;
+}
+
+.articleBtn_left a,
+.articleBtn_right a {
+    color: #b28603;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.articleBtn_left a i,
+.articleBtn_right a i {
+    color: #b28603;
+    font-size: 12px;
+    transition: all linear 0.5s;
+    margin-right: 10px;
+    transition: all 0.5s ease;
+}
+
+.articleBtn_right a i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.articleBtn_left a:hover {
+    margin-left: -15px;
+}
+
+.articleBtn_left a:hover i {
+    margin-right: 5px;
+    opacity: 0;
+}
+
+.articleBtn_right a:hover {
+    margin-right: -15px;
+}
+
+.articleBtn_right a:hover i {
+    margin-left: 5px;
+    opacity: 0;
+}
+
+.articleBtn_left h2,
+.articleBtn_right h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #34394B;
+}
+
+.comment_btn a {
+    position: relative;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #212b49;
+    display: inline-block;
+    margin-bottom: 14px;
+    z-index: 1;
+    background: #212b49;
+    margin: 50px 0;
+}
+
+.comment_btn a:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    transform: scale3d(0, 1, 1);
+    transform-origin: left;
+    transition: all .3s ease-in-out;
+    z-index: -1;
+}
+
+.comment_btn a:hover {
+    color: #212b49;
+}
+
+.comment_btn a:hover:after {
+    transform: scale3d(1, 1, 1);
+    transform-origin: left;
+}
+
+/*******************************readmorepage page end**************************/
+/*******************************contact page start**************************/
+.contactbanner {
+    position: relative;
+    padding: 155px 0px;
+    background: url(../images/contact-food.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contactbanner:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav .nav-item .nav-link-contact:before {
+    transform: scale3d(1, 1, 1);
+    transform-origin: left;
+}
+
+.navbar-nav .nav-item .nav-link-contact:hover:before {
+    transform: scale3d(0, 1, 1);
+    transform-origin: right;
+}
+
+.navbar-nav .nav-item .nav-link-contact:before {
+    width: calc(100% - 1em);
+    transform: scale3d(1, 1, 1);
+    transform-origin: left;
+}
+
+.navbar-nav .nav-item .nav-link-contact:hover:before {
+    transform: scale3d(0, 1, 1);
+    transform-origin: right;
+}
+
+.contactbanner .main_heading h2 {
+    color: #e8be47;
+    font-size: 100px;
+    font-weight: 900;
+    position: relative;
+    z-index: 1;
+
+}
+
+.contactbanner .mini_heading h2 {
+    font-weight: 900;
+    position: relative;
+    z-index: 1;
+}
+
+/*contactpageText start*/
+.contactpageText {
+    padding: 60px 0;
+}
+
+.contactUp_left {}
+
+.contactUp_left h2,
+.contactdown_left h2,
+.contactdown_right h2 {
+    color: #34394B;
+    font-weight: bold;
+}
+
+.contactUp_left p,
+.contactUp_right p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contactUp_right {
+    margin-top: 45px;
+}
+
+.contactdown_left {
+    margin-top: 65px;
+}
+
+
+.contactdown_left ul {
+    margin-top: 25px;
+}
+
+.contactdown_left ul li a {
+    display: table;
+    color: #000;
+    text-decoration: underline;
+    line-height: 25px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.contactdown_left ul li a:hover {
+    text-decoration-color: #daac57;
+}
+
+.contactdown_right {
+    margin-top: 65px;
+
+}
+
+
+
+.contactdown_rightlunch,
+.contactdown_rightdinner {
+    margin-top: 25px;
+}
+
+.contactdown_rightlunch h2,
+.contactdown_rightdinner h2 {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #34394B;
+}
+
+.contactdown_rightlunch p,
+.contactdown_rightdinner p {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+/*contactpageText end*/
+
+/*getintoch start*/
+.getintoch {
+    padding: 60px 0;
+}
+
+.getintoch_txt {}
+
+.getintoch_txt h2 {
+    color: #34394B;
+    font-weight: bold;
+}
+
+.getintoch_txt p {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+.getintoch_txt a {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #212b49;
+    display: inline-block;
+    margin-bottom: 14px;
+    z-index: 1;
+    background: #212b49;
+}
+
+.getintoch_txt a:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    transform: scale3d(0, 1, 1);
+    transform-origin: left;
+    transition: all .3s ease-in-out;
+    z-index: -1;
+}
+
+.getintoch_txt a:hover:after {
+    transform: scale3d(1, 1, 1);
+    transform-origin: left;
+}
+
+.getintoch_txt a:hover {
+    color: #212b49;
+}
+
+.getintoch_form {
+    margin-left: 30px;
+}
+
+.getintoch_form h2 {
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+}
+
+.getintoch_form h2 span {
+    color: red;
+}
+
+.getintoch_form input,
+.getintoch_form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    transition: all linear 0.2s;
+}
+
+.getintoch_form input:focus,
+.getintoch_form textarea:focus {
+    border: 1px solid #212A49;
+    box-shadow: 0px 0px 5px #212A49;
+}
+
+.getintoch_form input::placeholder,
+.getintoch_form textarea::placeholder {
+    font-size: 18px;
+}
+
+.getintoch_form a {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #212b49;
+    display: inline-block;
+    z-index: 1;
+    background: #212b49;
+    margin-top: 25px;
+}
+
+.getintoch_form a:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    transform: scale3d(0, 1, 1);
+    transform-origin: left;
+    transition: all .3s ease-in-out;
+    z-index: -1;
+}
+
+.getintoch_form a:hover:after {
+    transform: scale3d(1, 1, 1);
+    transform-origin: left;
+}
+
+.getintoch_form a:hover {
+    color: #212b49;
+}
+
+/*getintoch end*/
+
+
+/*******************************contact page end**************************/
+/*******************************Producers/Philosophy page start**************************/
+.producerPhilosophy {
+    padding: 44px 0;
+}
+.producerPhilosophy .flower span {
+    color: #a7a7a7;
+}
+.producerPhilosophy p {
+    padding: 44px 0;
+    font-size: 18px;
+}
+.producer h2 {
+    margin-bottom: 20px;
+}
+
+.producer p {
+    padding: 0;
+}
+
+.Philosophy h2 {
+    margin-bottom: 20px;
+}
+.Philosophy p {
+    padding: 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+.Philosophy a {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #212b49;
+    display: inline-block;
+    z-index: 1;
+    background: #212b49;
+    margin-top: 25px;
+}
+.Philosophy a:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    transform: scale3d(0, 1, 1);
+    transform-origin: left;
+    transition: all .3s ease-in-out;
+    z-index: -1;
+}
+.Philosophy a:hover:after {
+    transform: scale3d(1, 1, 1);
+    transform-origin: left;
+}
+.Philosophy a:hover {
+    color: #212b49;
+}
+
+/*******************************Producers/Philosophy page end**************************/
+/*******************************back_to_top start**************************/
+.back_to_top {
+    width: 35px;
+    height: 35px;
+    background: #212A49;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.back_to_top i {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 28px;
+    text-shadow: 0 7px 0 #ececec;
+}
+/*******************************back_to_top start end**************************/
+/*font-family: 'Open Sans', sans-serif;*/
+/*font-family: 'Raleway', sans-serif;*/
